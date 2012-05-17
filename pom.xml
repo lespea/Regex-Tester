@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lespea</groupId>
 	<artifactId>regextester</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>Regex Tester</name>
 	<description>Gui for testing a regex against a (potentially large) string</description>
 

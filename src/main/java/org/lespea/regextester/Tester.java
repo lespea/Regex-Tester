@@ -72,7 +72,7 @@ final public class Tester {
     private final Action  nextAction        = new NextAction();
     private final Action  quitAction        = new QuitAction();
     
-    private Pattern       userPattern;
+    private Pattern       userPattern       = Pattern.compile("");
     private int           cur;
     private int           max;
     
@@ -389,8 +389,7 @@ final public class Tester {
         this.userRegex.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                if (Tester.this.autoFind.isSelected() && userPattern != null
-                        && !userRegex.getText().equals(userPattern.pattern())) {
+                if (Tester.this.autoFind.isSelected() && !userRegex.getText().equals(userPattern.pattern())) {
                     if (debug) {
                         System.out.println("regex listener firing");
                         if (userPattern != null)
